@@ -612,32 +612,33 @@ unsigned char FilsCentrale(){
  */
 void * envoie_message(){ 
   printf("je suis le thread tout va bien \n");
+
   while(1){
   if(msg_EKF == 1){
     pthread_mutex_lock(&mutex_msg_EKF);
     printf("msg Euler = %f \n",SBG_EKF.euler[2]);
-    //send_file_message(SBG_EKF);
+    Envoie_data_EKF(SBG_EKF,1,CENTRALE);
     msg_EKF = 0;
     pthread_mutex_unlock(&mutex_msg_EKF);
   }
     if(msg_IMU == 1){
     pthread_mutex_lock(&mutex_msg_IMU);
     printf("msg IMU\n");
-    //send_file_message(SBGEKF_IMU);
+    Envoie_data_IMU(SBGIMU,1,CENTRALE);
     msg_IMU = 0;
     pthread_mutex_unlock(&mutex_msg_IMU);
   }
     if(msg_GPS_pos == 1){
     pthread_mutex_lock(&mutex_msg_GPS_pos);
     printf("msg GPS_pos\n");
-    //send_file_message(SBGEKF_GPS_pos);
+    Envoie_data_GPS_pos(SBGGPS_pos,1,CENTRALE);
     msg_GPS_pos = 0;
     pthread_mutex_unlock(&mutex_msg_GPS_pos);
   }
     if(msg_GPS_vel == 1){
     pthread_mutex_lock(&mutex_msg_GPS_vel);
     printf("msg GPS_vel\n");
-    //send_file_message(SBGEKF_GPS_vel);
+    Envoie_data_GPS_vel(SBGGPS_vel,1,CENTRALE);
     msg_GPS_vel = 0;
     pthread_mutex_unlock(&mutex_msg_GPS_vel);
   }
@@ -645,7 +646,7 @@ void * envoie_message(){
   if(msg_Clock == 1){
     pthread_mutex_lock(&mutex_msg_Clock);
     printf("msg Clock\n");
-    //send_file_message(SBGEKF_Clock);
+    //Envoie_data_CLOCK(SBGEKF_Clock,1,CENTRALE);
     msg_Clock = 0;
     pthread_mutex_unlock(&mutex_msg_Clock);
   }

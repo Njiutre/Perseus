@@ -52,6 +52,8 @@ int main(void)
 		}
 	}
 
+    printf("Création des Fils : OK\n");
+
 	//Code du fils n°1 : le centrale
 	if (pid_fils[0] == 0) {
 		printf("Fils n°1 (centrale) : %d\n" , getpid());
@@ -82,7 +84,7 @@ int main(void)
     //Code du fils n°4 : l'emetteur
 	if (pid_fils[3] == 0) {
 		printf("Fils n°4 (émetteur) : %d\n" , getpid());
-        printf("Fils n°1 (émetteur): J'ai fini !\n");
+        printf("Fils n°4 (émetteur): J'ai fini !\n");
 		exit(EXIT_SUCCESS);
 	}
 
