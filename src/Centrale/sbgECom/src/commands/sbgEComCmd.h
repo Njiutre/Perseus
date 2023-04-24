@@ -20,7 +20,7 @@
 #ifndef __SBG_ECOM_CMD_H__
 #define __SBG_ECOM_CMD_H__
 
-#include <sbgCommon.h>
+#include "../../common/sbgCommon.h"
 #include "sbgEComCmdAdvanced.h"
 #include "sbgEComCmdEthernet.h"
 #include "sbgEComCmdEvent.h"

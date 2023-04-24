@@ -31,7 +31,7 @@
 extern "C" {
 #endif
 
-#include <sbgCommon.h>
+#include "../sbgCommon.h"
 
 //----------------------------------------------------------------------//
 //- Structure definitions                                              -//

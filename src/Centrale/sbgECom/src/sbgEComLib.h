@@ -33,16 +33,16 @@
 extern "C" {
 #endif
 
-#include "sbgCommon.h"
-#include "crc/sbgCrc.h"
-#include "interfaces/sbgInterface.h"
-#include "interfaces/sbgInterfaceUdp.h"
-#include "interfaces/sbgInterfaceSerial.h"
-#include <interfaces/sbgInterfaceFile.h>
-#include <splitBuffer/sbgSplitBuffer.h>
-#include <streamBuffer/sbgStreamBuffer.h>
-#include <network/sbgNetwork.h>
-#include <swap/sbgSwap.h>
+#include "../common/sbgCommon.h"
+#include "../common/crc/sbgCrc.h"
+#include "../common/interfaces/sbgInterface.h"
+#include "../common/interfaces/sbgInterfaceUdp.h"
+#include "../common/interfaces/sbgInterfaceSerial.h"
+#include "../common/interfaces/sbgInterfaceFile.h"
+#include "../common/splitBuffer/sbgSplitBuffer.h"
+#include "../common/streamBuffer/sbgStreamBuffer.h"
+#include "../common/network/sbgNetwork.h"
+#include "../common/swap/sbgSwap.h"
 #include "sbgECanId.h"
 #include "sbgEComIds.h"
 #include "commands/sbgEComCmd.h"

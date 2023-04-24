@@ -10,7 +10,7 @@
 
 #include "./Librairies/FilsSauvegarde.h"
 #include "./Librairies/FilsTransmission.h"
-#include "./Centrale/FilsCentrale.h"
+#include "./Librairies/FilsCentrale.h"
 
 #include <stdio.h>		/* stderr, stdout, fprintf, perror */
 #include <unistd.h>		/* fork */
@@ -55,7 +55,7 @@ int main(void)
 	//Code du fils n°1 : le centrale
 	if (pid_fils[0] == 0) {
 		printf("Fils n°1 (centrale) : %d\n" , getpid());
-		envoie();
+		FilsCentrale();
         DetruitFileDeMessage (&FileDeMessage) ;
         printf("Fils n°1 (centrale): J'ai fini !\n");
 		exit(EXIT_SUCCESS);

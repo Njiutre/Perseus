@@ -20,8 +20,8 @@
 #ifndef __SBG_ECOM_BINARY_LOG_ODOMETER_H__
 #define __SBG_ECOM_BINARY_LOG_ODOMETER_H__
 
-#include <sbgCommon.h>
-#include <streamBuffer/sbgStreamBuffer.h>
+#include "../../common/sbgCommon.h"
+#include "../../common/streamBuffer/sbgStreamBuffer.h"
 
 //----------------------------------------------------------------------//
 //- Log odometer status definitions                                    -//

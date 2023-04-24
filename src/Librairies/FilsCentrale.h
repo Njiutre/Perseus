@@ -6,7 +6,7 @@
  * @author Team OBC (ENSSAT)
  */
 
-unsigned char main_centrale();
+unsigned char FilsCentrale();
 
 
 

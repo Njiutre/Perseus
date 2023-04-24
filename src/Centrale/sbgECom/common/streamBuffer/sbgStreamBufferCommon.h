@@ -21,7 +21,7 @@
 #ifndef __SBG_STREAM_BUFFER_COMMON_H__
 #define __SBG_STREAM_BUFFER_COMMON_H__
 
-#include <sbgCommon.h>
+#include "../sbgCommon.h"
 
 //----------------------------------------------------------------------//
 //- General definitions	                                               -//

@@ -20,8 +20,8 @@
 #ifndef __SBG_ECOM_BINARY_LOG_IMU_H__
 #define __SBG_ECOM_BINARY_LOG_IMU_H__
 
-#include <sbgCommon.h>
-#include <streamBuffer/sbgStreamBuffer.h>
+#include "../../common/sbgCommon.h"
+#include "../../common/streamBuffer/sbgStreamBuffer.h"
 
 //----------------------------------------------------------------------//
 //- Log Inertial Data definitions                                      -//
@@ -57,7 +57,7 @@ typedef struct _SbgLogImuData
 	uint16	status;						/*!< IMU status bitmask. */
 	float	accelerometers[3];			/*!< X, Y, Z accelerometers in m.s^-2. */
 	float	gyroscopes[3];				/*!< X, Y, Z gyroscopes in rad.s^-1. */
-	float	temperature;				/*!< Internal temperature in °C. */	
+	float	temperature;				/*!< Internal temperature in ï¿½C. */	
 	float	deltaVelocity[3];			/*!< X, Y, Z delta velocity in m.s^-2. */
 	float	deltaAngle[3];				/*!< X, Y, Z delta angle in rad.s^-1. */
 } SbgLogImuData;
@@ -72,7 +72,7 @@ typedef struct _SbgLogImuShort
 	uint16	status;						/*!< IMU status bitmask. */
 	int32	deltaVelocity[3];			/*!< X, Y, Z delta velocity. Unit is 1048576 LSB for 1 m.s^-2. */
 	int32	deltaAngle[3];				/*!< X, Y, Z delta angle. Unit is 67108864 LSB for 1 rad.s^-1. */
-	int16	temperature;				/*!< IMU average temperature. Unit is 256 LSB for 1°C. */
+	int16	temperature;				/*!< IMU average temperature. Unit is 256 LSB for 1ï¿½C. */
 } SbgLogImuShort;
 
 /*!
@@ -107,9 +107,9 @@ float sbgLogImuShortGetDeltaAngle(const SbgLogImuShort *pImuShort, size_t idx);
 float sbgLogImuShortGetDeltaVelocity(const SbgLogImuShort *pImuShort, size_t idx);
 
 /*!
- * Return from an IMU Short log, the temperature in °C
+ * Return from an IMU Short log, the temperature in ï¿½C
  * \param[in]	pImuShort					Input IMU short message instance.
- * \return									The converted temperature in °C
+ * \return									The converted temperature in ï¿½C
  */
 float sbgLogImuShortGetTemperature(const SbgLogImuShort *pImuShort);
 

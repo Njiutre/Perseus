@@ -1,9 +1,8 @@
-#include "FilsCentrale.h"
-#include "../Librairies/Structure.h"
+#include "./Librairies/FilsCentrale.h"
+#include "./Librairies/Structure.h"
 
-#include "sbgEComLib.h"
+#include "./Centrale/sbgECom/src/sbgEComLib.h"
 #include <pthread.h>
-
 
 //Clock SBGClock;
 EKF SBG_EKF ;
@@ -417,7 +416,7 @@ unsigned char test_message(unsigned char msg)
  * 
  * @author Team OBC (ENSSAT)
  */
-unsigned char main_centrale(){
+unsigned char FilsCentrale(){
   SbgEComHandle			comHandle;
 	SbgErrorCode			errorCode;
 	SbgInterface			sbgInterface;

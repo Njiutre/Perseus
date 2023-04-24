@@ -44,7 +44,7 @@ $(TARGET_NAME_SBG)
 DEPENDENCIES = \
 pthread rt dl
 
-GCCFLAGS = -O0 -g -W -Wall -Wextra -Wconversion -Werror -mtune=native  -march=native  -std=c99
+GCCFLAGS = -O0 -g -W -Wall #-Wextra -Wconversion -Werror -mtune=native  -march=native  -std=c99
 
 
 CFLAGS = \

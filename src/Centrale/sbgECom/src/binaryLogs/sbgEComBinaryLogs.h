@@ -20,7 +20,7 @@
 #ifndef __BINARY_LOGS_H__
 #define __BINARY_LOGS_H__
 
-#include <sbgCommon.h>
+#include "../../common/sbgCommon.h"
 #include "../sbgEComIds.h"
 #include "sbgEComBinaryLogDebug.h"
 #include "sbgEComBinaryLogDvl.h"

@@ -20,8 +20,8 @@
 #ifndef __SBG_ECOM_BINARY_LOG_EKF_H__
 #define __SBG_ECOM_BINARY_LOG_EKF_H__
 
-#include <sbgCommon.h>
-#include <streamBuffer/sbgStreamBuffer.h>
+#include "../../common/sbgCommon.h"
+#include "../../common/streamBuffer/sbgStreamBuffer.h"
 
 //----------------------------------------------------------------------//
 //- Solution status definitions                                        -//
@@ -36,8 +36,8 @@
 /*!
  * Solution bit masks definitions.
  */
-#define SBG_ECOM_SOL_ATTITUDE_VALID			(0x00000001u << 4)		/*!< Set to 1 if attitude data is reliable (Roll/Pitch error < 0,5°). */
-#define SBG_ECOM_SOL_HEADING_VALID			(0x00000001u << 5)		/*!< Set to 1 if geading data is reliable (Heading error < 1°). */
+#define SBG_ECOM_SOL_ATTITUDE_VALID			(0x00000001u << 4)		/*!< Set to 1 if attitude data is reliable (Roll/Pitch error < 0,5ï¿½). */
+#define SBG_ECOM_SOL_HEADING_VALID			(0x00000001u << 5)		/*!< Set to 1 if geading data is reliable (Heading error < 1ï¿½). */
 #define SBG_ECOM_SOL_VELOCITY_VALID			(0x00000001u << 6)		/*!< Set to 1 if velocity data is reliable (velocity error < 1.5 m/s). */
 #define SBG_ECOM_SOL_POSITION_VALID			(0x00000001u << 7)		/*!< Set to 1 if position data is reliable (Position error < 10m). */
 #define SBG_ECOM_SOL_VERT_REF_USED			(0x00000001u << 8)		/*!< Set to 1 if vertical reference is used in solution (data used and valid since 3s). */

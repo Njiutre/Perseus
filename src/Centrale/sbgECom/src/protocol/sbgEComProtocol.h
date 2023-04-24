@@ -25,9 +25,9 @@
 #ifndef __SBG_ECOM_PROTOCOL_H__
 #define __SBG_ECOM_PROTOCOL_H__
 
-#include <sbgCommon.h>
-#include <interfaces/sbgInterface.h>
-#include <streamBuffer/sbgStreamBuffer.h>
+#include "../../common/sbgCommon.h"
+#include "../../common/interfaces/sbgInterface.h"
+#include "../../common/streamBuffer/sbgStreamBuffer.h"
 
 //----------------------------------------------------------------------//
 //- Global definitions                                                 -//

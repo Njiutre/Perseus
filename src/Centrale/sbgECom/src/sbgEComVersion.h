@@ -20,7 +20,7 @@
 #ifndef __SBG_E_COM_VERSION_H__
 #define __SBG_E_COM_VERSION_H__
 
-#include "sbgCommon.h"
+#include "../common/sbgCommon.h"
 
 //----------------------------------------------------------------------//
 //- Version definitions                                                -//

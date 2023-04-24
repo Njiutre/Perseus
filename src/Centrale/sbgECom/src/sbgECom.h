@@ -31,7 +31,7 @@
 extern "C" {
 #endif
 
-#include <sbgCommon.h>
+#include "../common/sbgCommon.h"
 #include "sbgEComIds.h"
 #include "protocol/sbgEComProtocol.h"
 #include "binaryLogs/sbgEComBinaryLogs.h"
