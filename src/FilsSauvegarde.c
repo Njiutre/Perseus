@@ -39,7 +39,7 @@ void open_files(Variables_fichiers * file_struct,char* mode){
 	file_struct->fichier_donnees_GPS_pos=fopen("./Data/fichier_GPS_pos.txt",mode);
 	file_struct->fichier_donnees_GPS_vel=fopen("./Data/fichier_GPS_vel.txt",mode);
 	file_struct->fichier_donnees_IMU=fopen("./Data/fichier_IMU.txt",mode);
-	file_struct->fichier_donnees_Magnetometers=fopen("f./Data/ichier_Magnetometers.txt",mode);
+	file_struct->fichier_donnees_Magnetometers=fopen("./Data/ichier_Magnetometers.txt",mode);
 	file_struct->fichier_donnees_pressure=fopen("./Data/fichier_pression.txt",mode);
 	file_struct->fichier_donnees_EKF=fopen("./Data/fichier_EKF.txt",mode);
 	file_struct->fichier_donnees_CLOCK=fopen("./Data/fichier_CLOCK.txt",mode);
