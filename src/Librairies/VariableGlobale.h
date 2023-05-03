@@ -33,6 +33,13 @@ extern Variables_connexion foundModules ;
  */
 extern Variables_fichiers VariablesFichiers ;
 
+/**
+ * @author Team OBC (ENSSAT)
+ * @brief Variable qui définit si la transmission doit être active ou non
+ * @date 2023-03-14
+ */
+extern bool Transmission ;
+
 /*! -----------------------------------------------    Les fonctions     -----------------------------------------------*/
 
                       /*---------------------------    Innitialisation des Variables Globale     ---------------------------*/

@@ -1,5 +1,6 @@
 #include "./Librairies/FilsCentrale.h"
 #include "./Librairies/Structure.h"
+#include "./Librairies/EnvoieDataFileMessage.h"
 
 #include "./Centrale/sbgECom/src/sbgEComLib.h"
 #include <pthread.h>
@@ -617,7 +618,7 @@ void * envoie_message(){
   if(msg_EKF == 1){
     pthread_mutex_lock(&mutex_msg_EKF);
     printf("msg Euler = %f \n",SBG_EKF.euler[2]);
-    Envoie_data_EKF(SBG_EKF,1,CENTRALE);
+    Envoie_data_EKF(SBG_EKF,2,CENTRALE);
     msg_EKF = 0;
     pthread_mutex_unlock(&mutex_msg_EKF);
   }
@@ -631,7 +632,7 @@ void * envoie_message(){
     if(msg_GPS_pos == 1){
     pthread_mutex_lock(&mutex_msg_GPS_pos);
     printf("msg GPS_pos\n");
-    Envoie_data_GPS_pos(SBGGPS_pos,1,CENTRALE);
+    Envoie_data_GPS_pos(SBGGPS_pos,2,CENTRALE);
     msg_GPS_pos = 0;
     pthread_mutex_unlock(&mutex_msg_GPS_pos);
   }

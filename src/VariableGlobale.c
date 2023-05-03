@@ -15,6 +15,8 @@ Variables_connexion foundModules ;
 
 Variables_fichiers VariablesFichiers ;
 
+bool Transmission = true ; //Par défaut, la transmission est active
+
 
 /*! -----------------------------------------------    Les fonctions     -----------------------------------------------*/
 

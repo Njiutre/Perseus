@@ -33,7 +33,6 @@ int main(void)
 	pid_t pid_fils[4] = {-1,-1,-1,-1} ;
 
 	//Création & initialisation File_de_message
-	//initialisation_File_de_message(&FileDeMessage);
     DetruitFileDeMessage (&FileDeMessage) ;
 	CreationFileDeMessage(&FileDeMessage);
 	printf("Création des Files de message : OK\n");
@@ -50,13 +49,17 @@ int main(void)
 		if (pid_fils[i]==0) {
 			break;
 		}
+
+        else {
+             printf("Création du Fils %d : OK\n",i);
+        }
 	}
 
-    printf("Création des Fils : OK\n");
 
 	//Code du fils n°1 : le centrale
 	if (pid_fils[0] == 0) {
 		printf("Fils n°1 (centrale) : %d\n" , getpid());
+        envoie();
 		FilsCentrale();
         DetruitFileDeMessage (&FileDeMessage) ;
         printf("Fils n°1 (centrale): J'ai fini !\n");
