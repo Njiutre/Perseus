@@ -10,7 +10,7 @@
 
 #include "./Librairies/Structure.h"
 
-#include <mqueue.h>
+
 #include <errno.h>   // pour errno
 
 /**
