@@ -303,6 +303,54 @@ int Envoie_data_EKF (EKF EKF , unsigned int priorite , PeripheriqueType peripher
 
 }
 
+/** @brief Fonction qui envoie à l'OBC les données de EKF_nav
+ * 
+ * @date 07/03/2023
+ * 
+ * @author Team OBC (ENSSAT)
+ * 
+ * @param EKF_nav -> Adresse de la structure contenant les données de navigation
+ * @param priorite -> Priotité du message
+ * @param peripherique -> Destinationn de l'envoie
+ * 
+ * @return transmition_ok -> Valeur de retour de l'envoi : 
+ *                                                          - -1 -> envoie échoué
+ *                                                          - 0  -> envoie reussi
+ *
+ */
+int Envoie_data_EKF_nav (EKF_nav nav , unsigned int priorite , PeripheriqueType peripherique) {
+    
+    int transmition_ok ;
+
+    Message message;
+
+    message.type = EKF_NAV_TYPE;
+    message.data.ekf_nav = nav ;
+
+    switch (peripherique)
+        {
+        case CENTRALE :
+            transmition_ok = mq_send (FileDeMessage.file_message_Centrale, (const char*)&message, sizeof(Message) , priorite);
+            break;
+
+        case EMETTEUR :
+            transmition_ok = mq_send (FileDeMessage.file_message_Emetteur, (const char*)&message, sizeof(Message) , priorite);
+            break;
+
+        case SAUVEGARDE :
+            transmition_ok = mq_send (FileDeMessage.file_message_Sauvegarde, (const char*)&message, sizeof(Message) , priorite);
+            break;
+
+        default:
+            break;
+    }        
+
+    //printf("Envoie Pression fini !\n");
+
+    return transmition_ok ;
+
+}
+
 /**
  * @brief Fonction qui envoie à l'OBC les données du CLOCK
  * 
